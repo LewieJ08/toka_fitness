@@ -1,7 +1,6 @@
 # ToKa Fitness 🏋️
 
-**ToKa Fitness** is a fictional fitness tracking web application built as part of my T Level in Digital Production, Design, and Development.  
-The purpose of this project is to simulate a real-world software solution for a client in the health and fitness industry.
+**ToKa Fitness** is a fictional fitness tracking web application built as part of my preparation for my T Level Digital, OSP. The purpose of this project is to simulate a real-world software solution for a client in the health and fitness industry.
 
 ---
 
