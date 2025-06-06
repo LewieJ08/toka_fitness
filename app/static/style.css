@@ -1,0 +1,27 @@
+@font-face {
+    font-family: Varlera;
+    src: url(fonts/Varela-Regular.ttf);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #232f3e;
+    text-align: center;
+}
+
+main {
+    background-color: #f2f2f2;
+}
+
+footer {
+    background-color: #f2f2f2;
+}
+
+h1 {
+    color: white;   
+    font-family: Varlera;
+}
