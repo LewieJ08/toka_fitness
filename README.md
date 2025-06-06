@@ -23,7 +23,7 @@ This is a simulated client created for educational purposes and is not a real bu
 
 ---
 
-## ⚙️ Tech Stack (Planned)
+## ⚙️ Tech Stack
 
 - **Backend**: Python (Flask)
 - **Frontend**: HTML, CSS, JavaScript
