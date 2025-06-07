@@ -11,6 +11,8 @@ html, body {
 header {
     background-color: #232f3e;
     text-align: center;
+    padding: 25px;
+    font-size: 1.3em;
 }
 
 main {
