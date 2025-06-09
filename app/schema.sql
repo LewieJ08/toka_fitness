@@ -3,5 +3,5 @@
 CREATE TABLE IF NOT EXISTS users (
     user_id SERIAL PRIMARY KEY,
     username TEXT,
-    password text
+    password TEXT
 );
