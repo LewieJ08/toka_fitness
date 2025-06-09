@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from database import init_database
 
 app = Flask(__name__)
 
@@ -25,7 +26,16 @@ def login():
 @app.route("/register", methods=["GET","POST"])
 
 def register():
+
+    if request.method == "POST":
+        username = request.form["username"]
+        password = request.form["password"]
+        confirm_password = request.form["confirmPassword"]
+        
+        return render_template("register.html", username = username)
+
     return render_template("register.html")
 
 if __name__ == "__main__":
+    init_database()
     app.run(debug=True)
