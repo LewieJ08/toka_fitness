@@ -10,6 +10,8 @@ USER = getenv("USER")
 PORT = getenv("PORT")
 PASSWORD = getenv("PASSWORD")
 
+# DB Setup Functions
+
 def get_connection():
     return pg.connect(host=HOST, dbname=DBNAME, user=USER, port=PORT, password=PASSWORD)
 
@@ -20,4 +22,15 @@ def init_database():
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(schema)
+            conn.commit()
+
+# User DB Functions
+
+def add_user(username, password):
+    with open("queries/add_user.sql") as file:
+        query = file.read()
+    
+    with get_connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(query,(username, password))
             conn.commit()
