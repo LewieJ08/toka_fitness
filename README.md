@@ -7,7 +7,6 @@
 ## 🚧 Project Status
 
 > **This project is currently in early development.**  
-Only the project structure has been created. Features are being built incrementally.
 
 ---
 
