@@ -26,11 +26,11 @@ def init_database():
 
 # User DB Functions
 
-def add_user(username, password):
+def add_user(username, password, email, role):
     with open("queries/add_user.sql") as file:
         query = file.read()
     
     with get_connection() as conn:
         with conn.cursor() as cur:
-            cur.execute(query,(username, password))
+            cur.execute(query,(username, password, email, role))
             conn.commit()
