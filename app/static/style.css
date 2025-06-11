@@ -1,7 +1,9 @@
 @font-face {
     font-family: Varlera;
-    src: url(fonts/Varela-Regular.ttf);
+    src: url(assets/fonts/Varela-Regular.ttf);
 }
+
+/* Global Styles */
 
 html, body {
     margin: 0;
@@ -30,4 +32,14 @@ h1 {
 
 li {
     list-style-type: none;
+}
+
+/* Login Styles */
+
+.loginDiv {
+    border: solid;
+    border-width: 3px;
+    max-width: fit-content;
+    margin: auto;  
+    text-align: center;
 }
