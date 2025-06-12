@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
 </head>
 <body>
     <div class="loginDiv">
         <h2 class="loginH2">Register</h2>
-        <form action="{{ url_for('register') }}" method="post">
-            <input type="text" name="username" placeholder="Username">
-            <input type="text" name="password" placeholder="Password">
-            <input type="text" name="confirmPassword" placeholder="Confirm password">
-            <button type="submit">Register</button>
+        <form action="{{ url_for('register') }}" method="post"> <br><br>
+            <input type="text" name="username" placeholder="Username"> <br><br>
+            <input type="text" name="password" placeholder="Password"> <br><br>
+            <input type="text" name="confirmPassword" placeholder="Confirm Password"> <br><br>
+            <input type="email" name="email" placeholder="Example123@gmail.com"> <br><br>
+            <select name="role">
+                <option value="member">Member</option>
+                <option value="admin">Admin</option>
+            </select> <br><br>
+            <button type="submit">Register</button
         </form>
     </div>
 </body>
