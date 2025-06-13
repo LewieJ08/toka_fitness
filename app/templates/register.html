@@ -10,16 +10,22 @@
     <div class="loginDiv">
         <h2 class="loginH2">Register</h2>
         <form action="{{ url_for('register') }}" method="post"> <br><br>
-            <input type="text" name="username" placeholder="Username"> <br><br>
-            <input type="text" name="password" placeholder="Password"> <br><br>
-            <input type="text" name="confirmPassword" placeholder="Confirm Password"> <br><br>
-            <input type="email" name="email" placeholder="Example123@gmail.com"> <br><br>
-            <select name="membershipType">
-                <option value="member">Free</option>
-                <option value="admin">Premium</option>
+            <input type="text" name="username" placeholder="Username" required> <br><br>
+            <input type="text" name="password" placeholder="Password" required> <br><br>
+            <input type="text" name="confirmPassword" placeholder="Confirm Password" required> <br><br>
+            <input type="email" name="email" placeholder="Example123@gmail.com" required> <br><br>
+
+            <label for="membershipType">Membership Type</label> <br>
+            <select name="membershipType" required>
+                <option value="free">Free</option>
+                <option value="premium">Premium</option>
             </select> <br><br>
-            <button type="submit">Register</button
+            <button type="submit" id="registerButton">Register</button
         </form>
+        <p>Already have an Account? 
+            <a class="regLoginAnchor" href="{{url_for('login')}}">Log In</a>
+        </p>
     </div>
+<script src="{{ url_for('static', filename = 'login.js') }}"></script>
 </body>
-</html>
+</html>             
