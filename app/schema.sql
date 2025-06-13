@@ -5,5 +5,6 @@ CREATE TABLE IF NOT EXISTS users (
     username TEXT,
     password TEXT,
     email TEXT,
-    role TEXT
+    membership_type TEXT,
+    role TEXT DEFAULT 'member'
 );
