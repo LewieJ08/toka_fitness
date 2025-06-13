@@ -38,12 +38,12 @@ li {
     margin-right: 10px;
 }
 
-li:hover a:hover {
+li:hover .navBarAnchor:hover {
     color: black;
     background-color: #f2f2f2;
 }
 
-a, a:visited {
+.navBarAnchor, .navBarAnchor:visited {
     text-decoration: none;
     color: #f2f2f2;
     padding: 5px;
