@@ -32,7 +32,26 @@ h1 {
 
 li {
     list-style-type: none;
+    color: #f2f2f2;
+    max-width: fit-content;
+    display: inline-block;
+    margin-right: 10px;
 }
+
+li:hover a:hover {
+    color: black;
+    background-color: #f2f2f2;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: #f2f2f2;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* NavBar Styles */
+
 
 /* Login Styles */
 
@@ -41,5 +60,10 @@ li {
     border-width: 3px;
     max-width: fit-content;
     margin: auto;  
+    margin-top: 150px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
+    border-radius: 10px;
 }
