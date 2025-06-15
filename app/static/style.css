@@ -38,6 +38,8 @@ li {
     margin-right: 10px;
 }
 
+/* NavBar Styles */
+
 li:hover .navBarAnchor:hover {
     color: black;
     background-color: #f2f2f2;
@@ -49,9 +51,6 @@ li:hover .navBarAnchor:hover {
     padding: 5px;
     border-radius: 5px;
 }
-
-/* NavBar Styles */
-
 
 /* Login Styles */
 
