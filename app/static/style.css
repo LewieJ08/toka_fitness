@@ -1,20 +1,24 @@
 @font-face {
-    font-family: Varlera;
-    src: url(assets/fonts/Varela-Regular.ttf);
+    font-family: poppins;
+    src: url(assets/fonts/Poppins-Medium.ttf);
 }
 
 /* Global Styles */
 
 html, body {
+    font-family: poppins;
     margin: 0;
     padding: 0;
 }
 
 header {
     background-color: #232f3e;
-    text-align: center;
-    padding: 25px;
+    padding: 10px;
     font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 main {
@@ -26,21 +30,30 @@ footer {
 }
 
 h1 {
-    color: white;   
-    font-family: Varlera;
+    color: white;  
 }
 
-li {
+/* NavBar Styles */
+.navbar {
+    display: block;
+}
+
+.navBar ul {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navBarItem {
     list-style-type: none;
     color: #f2f2f2;
     max-width: fit-content;
     display: inline-block;
     margin-right: 10px;
+    margin-left: 10px;
 }
 
-/* NavBar Styles */
-
-li:hover .navBarAnchor:hover {
+.navBarItem:hover .navBarAnchor:hover {
     color: black;
     background-color: #f2f2f2;
 }
@@ -48,8 +61,8 @@ li:hover .navBarAnchor:hover {
 .navBarAnchor, .navBarAnchor:visited {
     text-decoration: none;
     color: #f2f2f2;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 5px; 
+    border-radius: 5px; 
 }
 
 /* Login Styles */
