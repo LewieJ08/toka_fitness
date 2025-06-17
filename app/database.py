@@ -26,6 +26,15 @@ def init_database():
 
 # User DB Functions
 
+def get_user_by_id(user_id):
+    with open("queries/get_user_by_id.sql") as file:
+        query = file.read()
+
+    with get_connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(query,(user_id,))
+            return cur.fetchall()
+
 def add_user(username, hashed_password, email, membership_type):
     with open("queries/add_user.sql") as file:
         query = file.read()
