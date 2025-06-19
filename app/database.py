@@ -34,6 +34,15 @@ def get_user_by_id(user_id):
         with conn.cursor() as cur:
             cur.execute(query,(user_id,))
             return cur.fetchall()
+        
+def get_user_by_username(username):
+    with open ("queries/get_user_by_username.sql") as file:
+        query = file.read()
+    
+    with get_connection() as conn: 
+        with conn.cursor() as cur:
+            cur.execute(query,(username,))
+            return cur.fetchall()
 
 def add_user(username, hashed_password, email, membership_type):
     with open("queries/add_user.sql") as file:
