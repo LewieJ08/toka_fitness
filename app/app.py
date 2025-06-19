@@ -59,13 +59,19 @@ def login():
         username = request.form["username"]
         password = request.form["password"]
 
-        user_data = get_user_by_username(username)
+        try:
+            user_data = get_user_by_username(username)
+        except IndexError:
+            return render_template("login.html", error = "Invalid Username or Password")
+        
         if check_password_hash(user_data[0][2], password):
             user = User(user_data[0][0], user_data[0][1], user_data[0][2])
             login_user(user)
-            return redirect(url_for("dashboard"))
 
-        return render_template ("login.html")
+            return redirect(url_for("dashboard"))
+        
+        else: 
+            return render_template ("login.html", error = "Invalid Username or Password")
 
     return render_template("login.html")
 
