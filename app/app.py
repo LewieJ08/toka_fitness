@@ -1,10 +1,10 @@
-from flask import Flask, render_template, request, jsonify, session
-from flask_login import LoginManager, UserMixin
-from werkzeug.security import generate_password_hash
+from flask import Flask, render_template, request, session, redirect, url_for
+from flask_login import LoginManager, UserMixin, login_user, logout_user, current_user
+from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv
 from os import getenv
 
-from database import init_database, add_user, get_user_by_id
+from database import init_database, add_user, get_user_by_id, get_user_by_username
 
 #Load .Env Variables
 load_dotenv()
@@ -34,7 +34,7 @@ class User(UserMixin):
 def load_user(user_id):
     return User.get(user_id)
 
-# App Routes
+# GUEST Routes
 
 @app.route("/", methods=["GET","POST"])
 
@@ -54,6 +54,19 @@ def articles():
 @app.route("/login", methods=["GET","POST"])
 
 def login():
+
+    if request.method == "POST":
+        username = request.form["username"]
+        password = request.form["password"]
+
+        user_data = get_user_by_username(username)
+        if check_password_hash(user_data[0][2], password):
+            user = User(user_data[0][0], user_data[0][1], user_data[0][2])
+            login_user(user)
+            return redirect(url_for("dashboard"))
+
+        return render_template ("login.html")
+
     return render_template("login.html")
 
 @app.route("/register", methods=["GET","POST"])
@@ -73,9 +86,16 @@ def register():
         hashed_password = generate_password_hash(password)
         add_user(username, hashed_password, email, membership_type)
         
-        return render_template("register.html")
+        return redirect(url_for("login"))
 
     return render_template("register.html")
+
+# MEMBER Routes
+
+@app.route("/dashboard",methods=["GET","POST"])
+
+def dashboard():
+    return render_template("dashboard.html")
     
 if __name__ == "__main__":
     init_database()
