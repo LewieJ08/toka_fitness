@@ -102,7 +102,11 @@ def register():
 
 def dashboard():
     return render_template("dashboard.html")
-    
+
+# ADMIN Routes
+
+# ERROR Handlers
+
 if __name__ == "__main__":
     init_database()
     app.run(debug=True)
