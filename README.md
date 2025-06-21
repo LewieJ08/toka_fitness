@@ -4,12 +4,6 @@
 
 ---
 
-## 🚧 Project Status
-
-> **This project is currently in early development.**  
-
----
-
 ## 👨‍💻 About the Client (Fictional)
 
 **ToKa Fitness** is a made-up fitness club that wants to offer members an online portal where they can:
