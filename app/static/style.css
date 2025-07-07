@@ -22,16 +22,32 @@ header {
 }
 
 main {
-    background-color: #f2f2f2;
+    padding: 10px;
+    display: flow-root;
+
 }
 
 footer {
-    background-color: #f2f2f2;
+    text-align: center;
 }
 
 h1 {
     color: white;  
 }
+
+img {
+    padding: 5px;
+}
+
+#img1 {
+    float: right;
+}
+
+#img2 {
+    float: left;
+    
+}
+
 
 /* NavBar Styles */
 .navbar {
